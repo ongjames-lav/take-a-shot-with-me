@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shot With Me - Photobooth</title>
+    <link rel="stylesheet" href="photobooth.css">
+</head>
+<body>
+    <div class="background-container">
+        <img src="/public/assets/images/bg2.svg" alt="Playful background">
+    </div>
+    
+    <div class="page-content">
+        <!-- Title Frame -->
+        <div class="title-frame">
+            <h1>SHOT WITH ME</h1>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Main Photo Frame -->
+            <div class="main-frame">
+                <div class="frame-border">
+                    <div class="photo-area" id="photoArea">
+                        <video id="cameraFeed" autoplay playsinline></video>
+                        <canvas id="photoCanvas"></canvas>
+                        <div id="countdown" class="countdown"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preview Frames -->
+            <div class="preview-frames">
+                <div class="preview-frame" id="preview1"></div>
+                <div class="preview-frame" id="preview2"></div>
+                <div class="preview-frame" id="preview3"></div>
+                <div class="preview-frame" id="preview4"></div>
+            </div>
+
+            <!-- Control Buttons -->
+            <div class="control-buttons">
+                <button id="takeButton" class="control-button">TAKE</button>
+                <button id="retakeButton" class="control-button">RETAKE</button>
+                <button id="continueButton" class="control-button">CONTINUE</button>
+                <button id="resetButton" class="control-button">RESET</button>
+                <button id="backButton" class="control-button back-button">← BACK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="photobooth.js"></script>
+</body>
+</html> 

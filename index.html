@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>meow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="background-container">
+    <img src="/public/assets/images/bg.svg" alt="Playful background">
+  </div>
+
+  <div class="page-content">
+    <svg id="curvedTitle" viewBox="0 0 2200 300">
+      <path id="curvePath" d="M50,250 Q1100,0 2150,250" fill="none" />
+      <text width="2200">
+        <textPath href="#curvePath" startOffset="50%" text-anchor="middle">
+          take a shot with me
+        </textPath>
+      </text>
+    </svg>
+
+    <button class="start-button" id="startButton">START</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> 

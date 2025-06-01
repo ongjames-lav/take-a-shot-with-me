@@ -1,0 +1,141 @@
+@font-face {
+  font-family: 'Michegar';
+  src: url('/public/fonts/Michegar.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'More Sugar';
+  src: url('/public/fonts/MoreSugar-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  overflow: hidden; /* Prevent scrollbars */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center;
+  align-items: center; /* Center children horizontally */
+  min-height: 100vh;
+  background-color: #FFF8E7; /* Cream background */
+  font-family: sans-serif; /* Default fallback font */
+}
+
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure background is behind other content */
+  overflow: hidden;
+}
+
+.background-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the container without distortion */
+}
+
+.illustration-placeholder {
+  width: 100%;
+  max-width: 500px; /* Max width for illustration */
+  aspect-ratio: 1 / 1; /* Square aspect ratio */
+  background-color: #FFE4D6; /* Light orange placeholder */
+  border-radius: 24px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow */
+  margin-bottom: 30px; /* Space below illustration */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.start-button {
+  padding: 12px 24px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #9e4632; /* Reverted button text color */
+  background-color: #ffffff; /* Reverted button background color */
+  border: none;
+  border-radius: 50px; /* Rounded button */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow */
+  margin: 60px auto 0; /* Center horizontally with auto margins */
+  font-family: 'More Sugar', cursive; /* Applied More Sugar font */
+  display: block; /* Ensure block display for margin auto to work */
+}
+
+.start-button:hover {
+  background-color: #ffe9c9; /* Darker orange on hover */
+}
+
+/* Styled the SVG text */
+#curvedTitle text {
+  font-family: 'Michegar', sans-serif; /* Apply Michegar font */
+  font-size: 250px; /* Base font size for large screens */
+  fill: #ffcf72; /* Text color */
+  stroke: #7c321b; /* Outline color */
+  stroke-width: 5px; /* Adjust outline thickness */
+}
+
+#curvedTitle {
+    width: 100%; /* Make SVG responsive */
+    max-width: 1600px; /* Added max-width to control overall size */
+    height: 300px;
+    margin-bottom: 140px; /* Removed margin-bottom */
+    transform: translateY(-80px); /* Adjusted to move SVG title up */
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+  #curvedTitle text {
+    font-size: 150px; /* Smaller font size for tablets */
+  }
+
+  #curvedTitle {
+    height: 250px; /* Adjust height for smaller font */
+    transform: translateY(-60px); /* Adjust vertical position */
+    margin-bottom: 100px; /* Adjust spacing */
+  }
+
+  .start-button {
+    margin-top: 40px; /* Adjust spacing */
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  #curvedTitle text {
+    font-size: 100px; /* Even smaller font size for phones */
+  }
+
+  #curvedTitle {
+    height: 180px; /* Adjust height for smaller font */
+    transform: translateY(-40px); /* Adjust vertical position */
+    margin-bottom: 60px; /* Adjust spacing */
+  }
+
+  .start-button {
+    margin-top: 20px; /* Adjust spacing */
+  }
+}
+
+/* Animations (will be added with JS or more CSS) */
+
+.page-content {
+    transition: opacity 0.5s ease-in-out; /* Add fade transition */
+}
+
+.fade-out {
+    opacity: 0; /* Fade to transparent */
+} 
